@@ -6,5 +6,6 @@ public class FirstJavaClass {
         System.out.println("Adding a new code");
 
 
+
     }
 }
