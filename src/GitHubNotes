@@ -39,6 +39,7 @@
                           3- git commit -m "my first commit"
                            : Done after each code change
                            : This is used for creating new version of the project
+                           : m means message to give a message you can give any message you want, commit means version
 
                                 *git branch -M main
                                : Done once for each project
@@ -51,6 +52,7 @@
                           :Done once for each project
 
                  ***If your code is successfully pushed, then you should refresh your github and see your code in github
+                 ***If you see error read the error message
 
                  DONE*****
 
