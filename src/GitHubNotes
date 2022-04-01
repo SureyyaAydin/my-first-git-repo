@@ -1,0 +1,111 @@
+
+
+                  Day1
+                  -----
+                  STEP 1: CREATE A PROJECT ON INTELLIJ
+                  Open your intellij
+                  Click on File>New>Project
+                  Click Next > Next
+                  Project Name : my_github_project
+                  ----------------------
+                  STEP 2: CREATE GITHUB REPOSITORY
+                  Repository(git repo) means github project folders. We must create a repository to store projects.
+                  Repository means folder in the github and its mandatory
+                  We already installed git.
+                  ***** Steps for creating a repository
+                   https://github.com/ and login
+                  *** click on your profile
+                  *** click on "Your repositories"
+                  *** click on "New"
+                  *** repository name : my-first-git-repo
+                  *** select public or private then click on "Create repository.."
+                  ---------------------
+                  STEP 3: PUSH THE FIRST CODE TO GITHUB
+                  *Open intellij terminal
+                  *Then follow the instruction on github!!!!
+                          1- git init
+                           Done only once for each project. This is used for initializing the project. This will create .git folder to store the project versions!!!
+                           When we push for the first time we must use "git init"
+
+                  NOTE: If you see :  The term 'git' is not recognized
+                  It means github installation is not complete
+                  Then get in touch with teach support
+
+                           2- git add .
+                            : Done after each code change.
+                            : Adds the code in the staging area
+                            : git add . means this will move the code from our computer to staging area
+
+                          3- git commit -m "my first commit"
+                           : Done after each code change
+                           : This is used for creating new version of the project
+
+                                *git branch -M main
+                               : Done once for each project
+
+                          4- git remote add origin https://github.com/abayramus/my-first-git-repo.git
+                             Done once for each project
+
+
+                          5- git push -u origin main
+                          :Done once for each project
+
+                 ***If your code is successfully pushed, then you should refresh your github and see your code in github
+
+                 DONE*****
+
+                 *********Git Push Practice*********
+                 After the first push, we do not use some of teh git commets that we used in the first commit.
+
+                 1. Create a new java class under src : FirstJavaClass
+                 2. Create a main method and write code:
+                 public class FirstJavaClass {
+                     public static void main(String[] args) {
+                         System.out.println("Learning github");
+                     }
+                 }
+
+                 3. Then push this code to the same repository
+
+                     *git add .
+                     *git commit -m "second commit"
+                     *git push
+
+
+                  ***********************************************
+
+                 HOW TO PULL THE CODE FROM GITHUB TO LOCAL COMPUTER
+                 *Create a new file : test_file.txt
+                 *Add some comments :
+                 Do not delete this file.
+                 This file is Ms. Filiz's code
+                 *Commit new file
+                 ***Now we created a file in github
+
+                 We will get that code from github to intelliJ.
+                 In intelliJ terminal write below commend to pull the code
+                     *git pull
+
+                 ***USEFULL COMMENDS:
+
+                 git status :
+                 This is our friend
+                 It means we see the status of our codes
+                 We can use this anytime to see where you are
+
+
+
+
+       What is Git?
+       Git is a version control tool
+       Git => Local Repository (local means computer)
+
+       Version means different new update
+       Version means the commit => Version = Commit
+       Commit means version, Whenever we add new version it means we are adding a new commit. They are the same thing
+       Version Control means we use Git to create some project version in our computer as well as in the github.com
+
+       Git and GitHub are different things
+       GitHub means the remote repository
+       GitHub => Remote Repository (github.com)
+
