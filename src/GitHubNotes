@@ -45,22 +45,24 @@
                                : Done once for each project
 
                           4- git remote add origin https://github.com/abayramus/my-first-git-repo.git
+                             This step is unique for all of you
                              Done once for each project
 
+                          -> git remove remote origin
 
                           5- git push -u origin main
                           :Done once for each project
 
                  ***If your code is successfully pushed, then you should refresh your github and see your code in github
-                 ***If you see error read the error message
+                 ***If you see error read the error message I'm repeating the steps all over again
 
                  DONE*****
 
                  *********Git Push Practice*********
-                 After the first push, we do not use some of teh git commets that we used in the first commit.
+                 After the first push, we do not use some of the git commends that we used in the first commit.
 
                  1. Create a new java class under src : FirstJavaClass
-                 2. Create a main method and write code:
+                 2. Create a main method and write some code:
                  public class FirstJavaClass {
                      public static void main(String[] args) {
                          System.out.println("Learning github");
