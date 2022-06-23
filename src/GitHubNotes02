@@ -1,0 +1,167 @@
+
+    How to send one specific class to the github?
+    - git add "file name"
+
+    - If you work together, In that case you do "git pull" frequently everyday to make sure my code is up to date
+
+                     Day02
+
+     Create a new class RemoteJavaClass.java under src folder
+     - Create new file
+     - Type below code in that file
+     public class RemoteJavaClass {
+         //This will also have some java code
+     }
+    - Scroll down and click "Commit new file"
+    - git pull
+    Then your github code should be in your local repo
+    When you refresh (you can refresh your intellij > Reload from Disk) you should see RemoteJavaClass in your local machine
+
+
+    How to push ONLY ONE SPECIFIC file?
+    - git add "path of the file"  For example: git add " (src/ForthJavaClass.java)" =>  This means add only that file. This code should push only src/ForthJavaClass
+    - git commit -m "message" => give any commit message you want
+    - git push
+
+    *** If you did auto add, it is automatically add. If you want to cancel;
+    Click on Search > Confirmation > Do not add > OK  => It will not automatically add the files
+
+    *** If you see this kind of error message ( error: failed to push some refs to..), you follow this step
+      SOLUTION:
+    - git pull
+    - git add .
+    - git commit -m "message"
+    - git push
+
+    *** If you get an error again and again, do that => git reset --hard origin/main
+        reset means it is delete the code, If the codes are not in the github
+
+
+    How to ignore a file?
+    You have hundred file, you want to push 99 of them, you do not want to push one of them => INTERVIEW
+    What do you do?
+    We have away to ignore specific files
+    We use ".gitignore" to ignore specific files
+    Create file
+    Right Click on Project > New > File => The file name must be ".gitignore"
+                                           => .gitignore file will have files that you do not want to send
+                                           => We add the path of classes that we want to ignore
+                                           => For example, if you add EightJavaClass.java in .gitignore then that file cannot be pushed to github
+                                           => It will be not trackable
+                                           => How can we make it visible?
+                                           => Remove the path of the class from the .gitignore
+                                           => Can I ignore more than one file? Yes, I can
+
+    IDE => Integration Development Environment
+
+
+    How to get the code from github?
+    - git pull => brings and adds to your local repo
+     When you try to pull code - git fetch
+                               - git merge
+                               - git pull; you do not have to this two (git fetch + git merge) one by one, You can just do "git pull"
+     'git pull' is enough to get the code from github to local repository ( git pull = git fetch + git merge)
+
+
+     If you pull, but at the same time developer change the code in github. It is not a conflict. You have to the 'git pull' one more time.
+     Whenever there is a change in github, You have to the git pull so you have to update your local code.
+
+     VERY IMPORTANT PART;
+     When you try to push the code, you get some error; 'failed to push some refs' Because github is protecting our code.
+     github.com is the boss, If your local intellij is not updated, you can not send the code
+     Solution; We have to pull before we push
+     Every single time, When we try to send some code, We have to try to get the latest one
+     To make sure our intellij is up to date then send the code,
+     Follow this steps; github.com > Add file > Create new file > The file name will be; 'MyNotes2.txt' > Commit new file
+                        Intellij > In the project level right click > New > File > The file name will be; 'MyNotes3.txt'
+                        MyNotes2.txt => Is it in my Intellij? => not yet
+                        MyNotes3.txt => It is not in github
+                        Do I have the latest updated github code in my intellij? => No
+                        Whatever in github must be in our local so we can send the code Otherwise If github let us push it then this will be delete it
+                        We have to pull the code, before push
+                        Without getting this file (MyNotes2.txt) in my local, Can I push this code (MyNotes3.txt)? No!
+                        For that reason, we get the error because my intellij is not updated
+                        Solution; *** 'git pull' before 'git push' ***
+                                      - git pull
+                                      - git add.
+                                      - git commit -m "message"
+                                      - git push
+                        I do not get error,  My local is updated. I fix that.
+                        There is a synchronization going on between github and our local
+
+
+     CONFLICT
+     Conflict means disagreement
+     Conflict means there is a problem
+     If local(intellij) and remote(github) has different code on the same line then we get conflict when we try to merge the code
+     Conflict happens when github and local has different code on the same line
+     github will ask you 'what do you want to do?'
+     Sometimes it does not even ask base on the configuration it may not even ask, it will merge
+     In that case, we have to fix it manually or some settings can fix it automatically
+     Automatic merge is not good, because you have to read the code understand 'what is going on?'
+     If they are in different line, It is not a conflict, permission / order issue
+     I have to pull the code before push, When I pull, I will not get any issue.
+     But, If they are in the same line different codes, car crash!
+
+     HOW DO YOU RESOLVE CONFLICT?
+     If github and Intellij has DIFFERENT CODES in the SAME LINE
+     We will fix it manually;
+     - After the git pull, When we see Conflict message, It means it is not good
+       In that case, We can manually illegal characters(error messages) remove to intellij
+       Then  - git add.
+             - git commit -m "message"
+             - git push
+
+     *** Always keep your local repository updated; - git pull before push
+
+
+     What is Branch?
+     Branch means new path that we should use to create our code
+     We should not use main branch as a scratch work
+     Master/ main branch should never have an issue, master branch should be very stable, We should not make any mistake in the master branch
+     We do not work on master branch, We should create new branches
+     I can create own branches that will be copy of master
+     Each person in the team works in their own local branch and push their own remote repo
+
+     Branch Commands
+     - git branch -a ; a means all, shows all branches
+
+     How do I create my own branch?
+     - git branch sureyya
+     - git branch ; I check if my branch is created
+     * main => stars means this is which branch I'm on
+
+     How can I switch to sureyya branch?
+     - git checkout sureyya ; checkout means switch to sureyya branch
+     - git branch
+
+      How can I switch back to main branch?
+      - git checkout main
+
+     Our branch code will not be in master branch;
+     1) Switch to sureyya branch, If you are in main - git branch
+                                                     - git checkout sureyya
+     2) I create a class(MyLocalClass1) under the src, commit it that class  - git add.
+                                                                             - git commit -m "sureyya branch codes"
+                                                                               MyLocalClass1 will not be main, It is in sureyya branch
+     I did my branch to create a copy of master When we do some commit It will not be automatically commit in master branch
+     For protective, for security reason
+
+     When it is first push;  - git push --set-upstream origin sureyya
+
+
+     Compare & pull request
+     To merge the code from local to master, Usually normal people does not know this merge
+     Usually their lead that kind of people knows how to merge it, but If you work in your on local code you also need to know it
+     But in company's not everyone does it
+     'pull request' means the experience lead will merge to the master that person is responsible from master branch
+     If master branch has issue, that person will be responsible
+     I'm not responsible, I pushed my code, that's it
+     That person will check it and push the code to master branch
+     That person has last experience, knows everything, very careful
+     Click on Compare & pull request > Write > Create pull request > Merge pull request (We are merging the code in master) > Confirm merge
+
+
+
+
+
